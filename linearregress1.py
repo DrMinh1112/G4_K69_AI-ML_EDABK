@@ -8,7 +8,7 @@ def pre_loss_function(features,weight,targets,bias):
     lost= np.dot(features,weight)-targets+bias
     return lost
 
-def loss_function(pre_lost):
+def loss_function(pre_loss):
     loss= np.dot(pre_loss,pre_loss.T)/(pre_loss.shape[0])
     return loss
 
