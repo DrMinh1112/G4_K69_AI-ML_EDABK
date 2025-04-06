@@ -8,8 +8,8 @@ def pre_loss_function(features,weight,targets):
     return lost
 
 def loss_function(pre_lost):
-    lost=pre_lost*pre_lost
-    return lost
+    loss= np.dot(pre_loss,pre_loss.T)/(pre_loss.shape[0])
+    return loss
 
 def gradient(features,weight,targets):
     temp=pre_loss_function(features,weight,targets)
