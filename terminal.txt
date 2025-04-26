@@ -1,0 +1,10 @@
+gcc -c main.c -o main.o -Wall -Wextra -g  # Compile main.c
+gcc -c dataframe.c -o dataframe.o -Wall -Wextra -g # Compile dataframe.c
+gcc -c tensor.c -o tensor.o -Wall -Wextra -g   # Compile tensor.c
+
+# Use -lm if your tensor.c uses math functions (like exp, sqrt, pow)
+gcc main.o dataframe.o tensor.o -o my_program -lm
+
+# --- Or compile and link in one step ---
+gcc main.c dataframe.c tensor.c -o my_program -Wall -Wextra -g -lm
+gcc linear.c dataframe.c tensor.c -o linearregression -Wall -Wextra -g -lm
